@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Principal</title>
+</head>
+<body>
+    <div class="formulario">
+        <button class="activador" onclick="login.show()">
+            <img src="./imagenes/iconos/login.png" alt="formulario">
+        </button>
+        <dialog id="login">
+            <button class="cruz" onclick="login.close()">
+                <img src="./imagenes/iconos/cross.png" alt="cruz">
+            </button>
+            <form action="" >
+                <fieldset class="panel">
+                    <legend>Login</legend>
+                    <label for="user">Usuario</label>
+                    <input type="text" name="user" id="usuario">
+                    <br>
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="password">
+                    <br>
+                    <button class="submit" type="submit">Login</button>
+                </fieldset>
+            </form>
+        </dialog>
+    </div>
+    <div class="container">
+        <div class="caratula">
+            <img src="./imagenes/banner.jpg" alt="Caratula">
+        </div>
+        <nav class="menu">
+            <ul>
+                <a href="./pantallas principales/mapa.html" class="mapaLink">
+                    <div class="contenedorMapa">
+                        <img src="./imagenes/fondos/mapa.jpg" alt="mapita">
+                        <li class="textoMapa">Mapa</li>
+                    </div>
+                </a>
+
+                <a href="./pantallas principales/jugadores.html" class="charLink">
+                    <div class="contenedorChar">
+                        <img src="./imagenes/fondos/hojaPersonaje.jpg" alt="hojaPersonaje">
+                        <li class="textoChar">Hojas de Personaje</li>
+                    </div>
+                </a>
+
+                <a href="./pantallas principales/historia.html" class="historiaLink">
+                    <div class="contendorHistoria">
+                        <img src="./imagenes/fondos/historia.webp" alt="historia">
+                        <li class="textoHistoria">Historia</li>
+                    </div>
+                </a>
+
+                <a href="./pantallas principales/aliados.html" class="personajesLink">
+                    <div class="contenedorPersonajes">
+                        <img src="./imagenes/fondos/npcs.jpg" alt="npcs">
+                        <li class="textoPersonajes">Aliados</li>
+                    </div>
+                </a>
+                
+                <a href="./pantallas principales/comic.html" class="comicLink">
+                    <div class="contendedorComic">
+                        <img src="./imagenes/fondos/comic.png" alt="comic">
+                        <li class="textoComic">Comic</li>
+                    </div>
+                </a>
+            </ul>
+        </nav>
+        
+        <div class="cuerpo">
+            <main>
+                <p class="introduccion">
+                    Hace mas de diez decadas, clanes de enanos y gnomos llegaron a un acuerdo conocido como el 
+                    Pacto de Phandelver, gracias al cual compartirian una valiosa mina en una maravillosa caverna conocida como la 
+                    Cueva del Oleaje. Ademas de su valor mineral, la mina albergaba grandes poderes magicos. Los lanzadores de conjuros 
+                    humanos se aliaron con los enanos y gnomos para canalizar y concentrar la energía en el interior de una gran forja 
+                    llamada la Forja de los Conjuros, donde podian crearse objetos magicos. Los tiempos fueron buenos, y la cercana ciudad 
+                    humana llamada Phandalin prospero tambien. Pero entoces les golpeo la desgracia cuando los orcos llegaron a traves 
+                    del norte y convirtieron en yermos las tierras que se cruzaron en su camino.
+                </p>
+                <p class="introduccion">
+                    Una poderosa fuerza de orcos apoyados por malvados magos mercenarios ataco la Cueva del Oleaje para hacerse 
+                    con sus riquezas y tesoros magicos. Los magos humanos lucharon junto a sus aliados enanos y gnomos para defender 
+                    la Forja de los Conjuros, y la consiguiente batalla magica destrozo la mayor parte de la caverna. 
+                    Pocos sobrevivieron en el interior de la gruta por los temblores y derrumbes, y la ubicacion de la 
+                    Cueva del Oleaje se perdio.
+                </p>
+                <p class="introduccion">
+                    Durante siglos, los rumores de riquezas enterradas han atraido a buscadores de tesoros 
+                    y oportunistas a los alrededores de Phandalin, pero ninguno ha tenido exito a la hora de localizar la mina 
+                    perdida. En los ultimos tiempos, la gente ha vuelto a repoblar la zona instalandose alli. Phandalin es ahora 
+                    una destartalada y tumultuosa ciudad fronteriza.
+                </p>
+                <p class="introduccion">
+                    <img src="./imagenes/iconos/d20.webp" alt="dado"><br><br>
+                    Toda esta introduccion dara lugar a la aventura conocida como <i>La Mina Perdida de Phandelver</i> la cual esta
+                    basada en las reglas y bestiario de Dungeons and Dragons de 5 edicion.
+                </p class="introduccion"><br>
+                    Libros necesarios para esta aventura:
+                    <ul>
+                        <li>Mina Perdida de Phandelver</li>
+                        <li>Guia del jugador 5 Edicion</li>
+                        <li>Bestiario 5 Edicion</li>
+                        <li>Para Dangeon master:
+                            <ul>
+                                <li>Guia del Dungeon Master 5E</li>
+                                <li>Pantalla de Dungeon Master</li>
+                            </ul>
+                        </li>
+                    </ul>
+                <p>
+                </p>
+            </main>
+        </div>
+        <footer class="foot">
+            <table>
+                <thead>
+                    <th>Contacto</th>
+                    <th>Redes Sociales</th>
+                    <th>Informacion Adicional</th>
+                </thead>
+                <tr>
+                    <td><a href="tel: +34664269048">664 26 90 48</a></td>
+                    <td>
+                        <img src="./imagenes/iconos/whatsapp.png" alt="Whatsapp">
+                        <img src="./imagenes/iconos/twitter.webp" alt="twitter">
+                        <a href="https://www.dndbeyond.com/" target="_blank">
+                            <img src="./imagenes/iconos/beyond.webp" alt="D&D">
+                        </a>
+                    </td>
+                    <td>
+                        Compra de libros y miniatruas: 
+                        <a href="https://www.dadosycubitos.es/tienda/Juegos-de-Rol-c142334005" target="_blank"><img src="./imagenes/iconos/dados y cubitos.jpg" alt="D&C"></a>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </div>    
+</body>
+</html>

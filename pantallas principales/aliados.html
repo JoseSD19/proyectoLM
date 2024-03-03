@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Aliados</title>
+</head>
+<body>
+    <div class="vuelta">
+        <a href="../index.html">
+            <img src="../imagenes/iconos/volver.png" alt="volver">
+        </a>
+    </div>
+    <div class="formulario">
+        <button class="activador" onclick="login.show()">
+            <img src="../imagenes/iconos/login.png" alt="formulario">
+        </button>
+        <dialog id="login">
+            <button class="cruz" onclick="login.close()">
+                <img src="../imagenes/iconos/cross.png" alt="cruz">
+            </button>
+            <form action="" >
+                <fieldset class="panel">
+                    <legend>Login</legend>
+                    <label for="user">Usuario</label>
+                    <input type="text" name="user" id="usuario">
+                    <br>
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="password">
+                    <br>
+                    <button class="submit" type="submit">Login</button>
+                </fieldset>
+            </form>
+        </dialog>
+    </div>
+    <div class="aliado gundren">
+        <h3>Gundren Buscarrocas</h3>
+        <img src="../imagenes/tokens/personajes/npcs/Gundren-rockseeker.webp" alt="gundren">
+        <p>Comerciante enano que pidio al grupo transportar una carreta con mercancia para su nueva tienda
+            en <a href="../pantallas principales/Lugares/phandalin.html" target="_blank">Phandalin</a>, 
+            tenia una personalidad afable y cercana hacia el grupo.
+            <br>
+            Gundren y sus hermanos se han dedicado a rescatar antiguos objetos que pertenecian a los enanos 
+            y que fueron robados, con el fin de retornarlos a sus propietarios originales, o al menos, 
+            a lo que haya quedado de sus clanes.
+            <br>
+            Pero sus hermanos desaparecieron hace algun tiempo buscando la Cueva del Oleaje, quedando solamente Gundren.
+            <br>
+            La ultima vez que el grupo lo vio estaba partiendo hacia Phandalin juntos a su guardaespaldas Sildar.
+        </p>
+    </div>
+
+    <div class="aliado sildar">
+        <h3>Sildar Hallwinter</h3>
+        <img src="../imagenes/tokens/personajes/npcs/Sildar_Hallwinter.webp" alt="sildar">
+        <p>Guerrero humano de mediana edad, viste una cota de malla y blande una espada
+            Actualmente es el guardaespaldas de Gundren Buscarrocas, al cual conocio cuando
+            investigaba la desaparicion de la <i>orja de los Conjuros</i>.
+            <br>
+            Fue el quien guio al grupo hacia la mansion de Gundren.
+            <br>
+            <br>
+            Visto por ultima vez: 
+            <details>
+                <summary>Spoiler de la Aventura</summary>
+                <p>En el escondite Cragmaw donde era prisionero de Yemik, el lider goblin, tras la emboscada en el camino</p>
+            </details> 
+        </p>
+    </div>
+
+</body>
+</html>

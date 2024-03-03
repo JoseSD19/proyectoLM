@@ -1,0 +1,978 @@
+@font-face {
+    font-family: Dungeons;
+    src: url(./fonts/Fontspring-DEMO-bookmania-semibolditalic.otf);
+}
+
+body{
+    background-color: rgba(0, 0, 0, 1);
+    font-family: Dungeons;
+    font-size: 1.6em;
+}
+
+.container{
+    color: aliceblue;
+    display: grid;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "caratula caratula"
+                         "nav cuerpo"
+                         "nav cuerpo"
+                         "footer footer";
+    
+    grid-template-rows: 1fr 1fr 1fr 0.3fr;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px;
+}
+
+/*
+*   Caratula
+*/
+
+.caratula{
+    grid-area: caratula;
+    align-self: flex-start;
+    justify-self: center;
+    z-index: 0;
+}
+
+.caratula img{
+    max-width: 99vw;
+    z-index: -1;
+}
+
+/*
+*   Menu
+*/
+
+.menu{
+    grid-area: nav;
+    text-align: center;
+    top: 2%;
+}
+
+.menu ul{
+    list-style: none;
+    position: relative;
+    right:5%;
+    line-height: 4em;
+}
+
+/*
+*   Fondo de Mapa
+*/
+
+.contenedorMapa{
+    position: relative;
+    display: inline-block;
+}
+
+.textoMapa{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in;
+}
+
+.contenedorMapa img{
+    width: 300px;
+    transform: translate(-500px, 0);
+    transition: 0.2s ease-in;
+}
+
+.mapaLink:hover img{
+    transform: translate(0px, 0);
+    transition: 0.25s ease-out;
+}
+
+.mapaLink:hover li{
+    transition: 0.3s ease-out;
+    color: black;
+}
+
+/*
+*   Fondo de Hojas de Personajes
+*/
+
+.contenedorChar{
+    position: relative;
+    display: inline-block;
+}
+
+.textoChar{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in;
+}
+
+.contenedorChar img{
+    width: 300px;
+    transform: translate(-500px, 0);
+    transition: 0.2s ease-in;
+}
+
+.charLink:hover img{
+    transform: translate(0px, 0);
+    transition: 0.25s ease-out;
+}
+
+.charLink:hover li{
+    transition: 0.3s ease-out;
+    color: black;
+}
+
+/*
+*   Fondo de Historia
+*/
+
+.contendorHistoria{
+    position: relative;
+    display: inline-block;
+}
+
+.textoHistoria{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in;
+}
+
+.contendorHistoria img{
+    width: 300px;
+    transform: translate(-500px, 0);
+    transition: 0.2s ease-in;
+}
+
+.historiaLink:hover img{
+    transform: translate(0px, 0);
+    transition: 0.25s ease-out;
+}
+
+.historiaLink:hover li{
+    transition: 0.3s ease-out;
+    color: black;
+}
+
+/*
+*   Fondo de Personajes
+*/
+
+.contenedorPersonajes{
+    position: relative;
+    display: inline-block;
+}
+
+.textoPersonajes{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in;
+}
+
+.contenedorPersonajes img{
+    width: 300px;
+    transform: translate(-500px, 0);
+    transition: 0.2s ease-in;
+}
+
+.personajesLink:hover img{
+    transform: translate(0px, 0);
+    transition: 0.25s ease-out;
+}
+
+.personajesLink:hover li{
+    transition: 0.3s ease-out;
+    color: black;
+}
+
+/*
+*   Fondo del Comic
+*/
+
+.contendedorComic{
+    position: relative;
+    display: inline-block;
+}
+
+.textoComic{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in;
+}
+
+.contendedorComic img{
+    width: 300px;
+    transform: translate(-500px, 0);
+    transition: 0.2s ease-in;
+}
+
+.comicLink:hover img{
+    transform: translate(-10px, 0);
+    transition: 0.25s ease-out;
+}
+
+.comicLink:hover li{
+    transition: 0.3s ease-out;
+    color: black;
+}
+
+/* ---Fin de los fondos--- */
+
+.cuerpo{
+    grid-area: cuerpo;
+    display: inline-block;
+}
+
+.introduccion:first-child:first-letter{
+    float: left;
+    font-size: 3.5em;
+    margin-top: 0.1em;
+}
+
+a:link{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.introduccion img{
+    float: left;
+    width: 200px;
+}
+
+/*
+*   Footer
+*/
+
+.foot{
+    font-family: sans-serif;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+
+.foot table{
+    border-top: 3px solid #fff;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.foot table td,th{
+    width: 20%;
+}
+
+.foot img{
+    width: 50px;
+}
+
+/*                          *
+*                           *
+*-----------MAPA------------*
+*                           *
+*                           */
+
+.mapa{
+    position: relative;
+    left: 11%;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(40,1fr);
+    max-width: 1200px;
+    max-height: 1643px;
+}
+
+#fondo{
+    grid-area: 1 / 1 / 41 / 31;
+    z-index: 0;
+}
+
+#batalla{
+    grid-area: 30/15/31/16;
+    z-index: 2;
+}
+
+#batalla img{
+    width: 100%;
+    position: relative;
+    top: -5%;
+    left: -10%;
+}
+
+#cueva{
+    grid-area: 26/17/27/18;
+    z-index: 2;
+}
+
+#cueva img{
+    width: 100%;
+    position: relative;
+    top: -10%;
+    right: -30%;
+}
+
+#ciudad{
+    grid-area: 32/18/33/19;
+    z-index: 2;
+}
+
+#ciudad img{
+    width: 100%;
+    position: relative;
+    top: -35%;
+    left: -35%;
+}
+
+/*                          *
+*                           *
+*---------EMBOSCADA---------*
+*                           *
+*                           */
+
+.emboscada{
+    position: relative;
+    left: 30%;
+    display: grid;
+    grid-template-columns: repeat(15,1fr);
+    grid-template-rows: repeat(21,1fr);
+    max-width: 760px;
+    max-height: 1100px;
+}
+
+#emboscada{
+    grid-area: 1/1/22/16;
+    z-index: 0;
+}
+
+.go1{
+    grid-area: 12/8/13/9;
+    z-index: 2;
+}
+
+.go1 img{
+    width: 200%;
+    position: relative;
+    top: 20%;
+    left: 55%;
+}
+
+.go2{
+    grid-area: 11/6/12/7;
+    z-index: 2;
+}
+
+.go2 img{
+    width: 200%;
+    position: relative;
+    top: 50%;
+    left: 55%;
+}
+
+.go3{
+    grid-area: 12/12/13/13;
+    z-index: 2;
+}
+
+.go3 img{
+    width: 200%;
+    position: relative;
+    top: 70%;
+    left: 55%;
+}
+
+.go4{
+    grid-area: 17/8/18/9;
+    z-index: 2;
+}
+
+.go4 img{
+    width: 200%;
+    position: relative;
+    top: -40%;
+    left: 55%;
+}
+
+.go5{
+    grid-area: 17/12/18/13;
+    z-index: 2;
+}
+.go5 img{
+    width: 200%;
+    position: relative;
+    top: 20%;
+    left: 55%;
+}
+
+.batalla{
+    filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.363));
+    transition: all 0.2s ease-in-out;
+}
+
+.batalla:hover img{
+    transform: scale(1.3);
+}
+
+/*                          *
+*                           *
+*-----------CUEVA-----------*
+*                           *
+*                           */
+
+.mapaCueva{
+    position: relative;
+    left: 8%;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    max-width: 1600px;
+    max-height: 1116px;
+}
+
+#cuevaFondo{
+    grid-area: 1/1/21/31;
+    z-index: 0;
+}
+
+.g1{
+    grid-area: 11/4/12/5;
+    z-index: 2;
+}
+
+.g1 img{
+    width: 150%;
+    position: relative;
+}
+
+.g2{
+    grid-area: 11/7/12/8;
+    z-index: 2;
+}
+
+.g2 img{
+    width: 150%;
+    position: relative;
+}
+
+.g3{
+    grid-area: 8/5/9/6;
+    z-index: 2;
+}
+
+.g3 img{
+    width: 150%;
+    position: relative;
+}
+
+.g4{
+    grid-area: 8/18/9/19;
+    z-index: 2;
+}
+
+.g4 img{
+    width: 150%;
+    position: relative;
+    top: 100%;
+    left: -20%;
+}
+
+.g5{
+    grid-area: 10/24/11/25;
+    z-index: 2;
+}
+
+.g5 img{
+    width: 150%;
+    position: relative;
+    top: 20%;
+    left: -20%;
+}
+
+.g6{
+    grid-area: 14/23/15/24;
+    z-index: 2;
+}
+
+.g6 img{
+    width: 150%;
+    position: relative;
+    left: -20%;
+}
+
+.g7{
+    grid-area: 15/24/16/25;
+    z-index: 2;
+}
+
+.g7 img{
+    width: 150%;
+    position: relative;
+}
+
+.g8{
+    grid-area: 16/14/17/15;
+    z-index: 2;
+}
+
+.g8 img{
+    width: 150%;
+    position: relative;
+}
+
+.l1{
+    grid-area: 12/17/13/18;
+    z-index: 2;
+}
+
+.l1 img{
+    width: 150%;
+    position: relative;
+    top: 20%;
+    left: -10%;
+}
+
+.l2{
+    grid-area: 13/16/14/17;
+    z-index: 2;
+}
+
+.l2 img{
+    width: 150%;
+    position: relative;
+}
+
+.o1{
+    grid-area: 14/27/15/28;
+    z-index: 2;
+}
+
+.o1 img{
+    width: 150%;
+    position: relative;
+    left: -20%;
+    top: 30%;
+}
+
+.cueva{
+    filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.363));
+    transition: all 0.2s ease-in-out;
+}
+
+.cueva:hover img{
+    transform: scale(1.3);
+}
+
+/*                          *
+*                           *
+*---------Phandalin---------*
+*                           *
+*                           */
+
+.phandalin{
+    position: relative;
+    left: 8%;
+    display: grid;
+    grid-template-columns: repeat(40,1fr);
+    grid-template-rows: repeat(30, 1fr);
+    max-width: 1600px;
+    max-height: 1116px;
+}
+
+.phandalinMap{
+    grid-area: 1/1/31/41;
+    z-index: 0;
+    width: 100%;
+}
+
+.ayto{
+    grid-area: 15/17/17/19;
+    z-index: 2;
+}
+
+.ayto img{
+    width: 110%;
+    position: relative;
+    top: 20%;
+    left: 12%;
+}
+
+.descripcionAyto{
+    visibility: hidden;
+    background-color: #fff;
+    border: 2px solid black;
+    width: 300px;
+    z-index: 3;
+}
+
+.ayto:hover p{
+    visibility: visible;
+}
+
+.mansion{
+    grid-area: 11/34/14/38;
+    z-index: 2;
+}
+
+.mansion img{
+    width: 55%;
+    position: relative;
+    top: 15%;
+    left: 21%;
+}
+
+.descripcionMansion{
+    visibility: hidden;
+    background-color: #fff;
+    border: 2px solid black;
+    width: 300px;
+    z-index: 3;
+}
+
+.mansion:hover p{
+    visibility: visible;
+}
+
+.gigante{
+    grid-area: 12/25/14/27;
+    z-index: 2;
+}
+
+.gigante img{
+    width: 70%;
+    position: relative;
+    top: 35%;
+    left: -5%;
+}
+
+.descripcionGigante{
+    visibility: hidden;
+    background-color: #fff;
+    border: 2px solid black;
+    width: 300px;
+    z-index: 3;
+}
+
+.gigante:hover p{
+    visibility: visible;
+}
+
+.posada{
+    grid-area: 12/18/14/20;
+    z-index: 2;
+}
+
+.posada img{
+    width: 105%;
+    position: relative;
+    top: -15%;
+    left: 2%;
+}
+
+.edificio:hover img{
+    transform: scale(1.3);
+}
+
+.descripcionPosada{
+    visibility: hidden;
+    background-color: #fff;
+    border: 2px solid black;
+    width: 350px;
+    z-index: 3;
+}
+
+.posada:hover p{
+    visibility:visible;
+}
+
+.leyendaMansion{
+    grid-area: 9/33/11/39;
+    z-index: 2;
+    position: relative;
+    top: 30%;
+    background-color: #fff;
+    height: 30px;
+    text-align: center;
+}
+
+.leyendaGigante{
+    grid-area: 13/23/15/29;
+    z-index: 2;
+    background-color: #fff;
+    height: 32px;
+    text-align: center;
+    position: relative;
+    top: 30%;
+}
+
+.leyendaPosada{
+    grid-area: 10/16/12/24;
+    z-index: 2;
+    background-color: #fff;
+    height: 30px;
+    text-align: center;
+}
+
+.leyendaAyto{
+    grid-area: 16/14/18/22;
+    z-index: 2;
+    background-color: #fff;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    top: 30%;
+}
+
+
+
+/*                           *
+*                            *
+*---------Jugadores----------*
+*                            *
+*                            */
+
+.hojas{
+    display: grid;
+    grid-template-areas:"karlach astarion laezel wyll shadowheart";
+    grid-template-rows: repeat(1fr,5);
+    gap: 30px;
+    justify-content: center;
+}
+
+.hojas img{
+    width: 300px;
+}
+
+.karlach{
+    grid-area: karlach;
+}
+
+.laezel{
+    grid-area: laezel;
+}
+
+.shadowheart{
+    grid-area: shadowheart;
+}
+
+.astarion{
+    grid-area: astarion;
+}
+
+.wyll{
+    grid-area: wyll;
+}
+
+/*                           *
+*                            *
+*---------Hoistoria----------*
+*                            *
+*                            */
+
+.titulo{
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 2px rgb(248, 44, 44);
+}
+
+.prologo{
+    color: #fff;
+}
+
+.prologo a{
+    color: rgb(248, 44, 44);
+}
+
+.prologo summary{
+    list-style: none;
+    color: rgb(248, 44, 44);
+    border-bottom: 2px solid #fff;
+}
+
+.spoiler{
+    margin-top: 30px;
+}
+
+.spoilerIzq{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.spoilerDer{
+    text-align: right;
+    margin-right: 20px;
+}
+
+/*                           *
+*                            *
+*-------Hojas y Comic--------*
+*                            *
+*                            */
+
+.hojaPersonaje{
+    display: flex;
+    justify-content: center;
+}
+
+.comic{
+    display: flex;
+    justify-content: center;
+}
+
+/*
+*   Volver
+*/
+
+.vuelta{
+    position: fixed;
+}
+
+.vuelta img{
+    width: 50px;
+}
+
+/*
+*   Formulario
+*/
+
+.activador{
+    position: fixed;
+    left: 96%;
+    z-index: 10;
+    background: none;
+}
+
+.panel{
+    position: fixed;
+    left: 87%;
+    background-color: #fff;
+    border: 3px solid black;
+    color: black;
+    width: 100px;
+    height: 200px;
+    z-index: 1;
+}
+
+.panel input:focus{
+    background-color: rgb(248, 44, 44);
+    text-decoration: none;
+}
+
+.panel legend{
+    background-color: rgb(248, 44, 44);
+    border: 3px solid black;
+}
+
+.submit{
+    position: fixed;
+    left: 91.35%;
+    margin-top: 10px;
+    background-color: rgb(248, 44, 44);
+    color: black;
+    border: 2px solid black;
+}
+
+.formulario img{
+    width: 50px;
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+.cruz{
+    z-index: 30;
+    position: fixed;
+    left: 95%;
+    margin-top: 15px;
+}
+
+.cruz img{
+    width: 50px;
+}
+
+#login{
+    background: none;
+    border: none;
+}
+
+/*                           *
+*                            *
+*-----------Aliados----------*
+*                            *
+*                            */
+
+.aliado h3{
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+.aliado img{
+    width: 15vw;
+}
+
+.aliado p{
+    color: #fff;
+    margin-left: 10px;
+    width: 80vw;
+}
+
+.aliado a{
+    color: rgb(248, 44, 44);
+}
+
+/*
+*   Gundren
+*/
+
+.gundren{
+    display: inline-block;
+}
+
+.gundren img{
+    float: left;
+}
+
+.gundren p{
+    float: right;
+}
+
+/*
+*   Sildar
+*/
+
+.sildar{
+    display: inline-block;
+}
+
+.sildar img{
+    float: right;
+}
+
+.sildar p{
+    float: left;
+}
+
+.sildar summary{
+    list-style: none;
+    color: rgb(248, 44, 44);
+    position: relative;
+    margin-left: 10px;
+}
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Jugadores</title>
+</head>
+<body>
+    <div class="vuelta">
+        <a href="../index.html">
+            <img src="../imagenes/iconos/volver.png" alt="volver">
+        </a>
+    </div>
+    <div class="formulario">
+        <button class="activador" onclick="login.show()">
+            <img src="../imagenes/iconos/login.png" alt="formulario">
+        </button>
+        <dialog id="login">
+            <button class="cruz" onclick="login.close()">
+                <img src="../imagenes/iconos/cross.png" alt="cruz">
+            </button>
+            <form action="" >
+                <fieldset class="panel">
+                    <legend>Login</legend>
+                    <label for="user">Usuario</label>
+                    <input type="text" name="user" id="usuario">
+                    <br>
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="password">
+                    <br>
+                    <button class="submit" type="submit">Login</button>
+                </fieldset>
+            </form>
+        </dialog>
+    </div>
+    <div class="hojas">
+        <div calss="hoja astarion">
+            <a href="../hojas/paginas/astarion.html">
+                <img src="../imagenes/tokens/personajes/astarion.jpg" alt="Astarion">
+            </a>
+        </div>
+        <div class="hoja karlach">
+            <a href="../hojas/paginas/karlach.html">
+                <img src="../imagenes/tokens/personajes/karlach.jpg" alt="Karlach">
+            </a>
+        </div>
+        <div class="hoja laezel">
+            <a href="../hojas/paginas/laezel.html">
+                <img src="../imagenes/tokens/personajes/lae'zel.jpg" alt="Laezel">
+            </a>
+        </div>
+        <div class="hoja shadowheart">
+            <a href="../hojas/paginas/shadowheart.html">
+                <img src="../imagenes/tokens/personajes/shadow.jpg" alt="Shadowheart">
+            </a>
+        </div>
+        <div class="hoja wyll">
+            <a href="../hojas/paginas/wyll.html">
+                <img src="../imagenes/tokens/personajes/wyll.jpg" alt="Wyll">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
